@@ -12,22 +12,35 @@ Automated deployment script for Gensyn RL-Swarm node with auto-restart, hang det
 - ✅ **Process cleanup** - prevents duplicate nodes and zombie processes
 - ✅ **Inactivity detection** - kills hung nodes (30 min timeout)
 
-## Quick Start
-```bash
-# Clone your rl-swarm repository
-git clone https://github.com/gensyn-ai/rl-swarm
-git clone <your-repo> rl-swarm
-cd rl-swarm
+## Installation
 
-# Place your backup files (if you have them)
+1. **Clone your rl-swarm repository:**
+```bash
+git clone  rl-swarm
+cd rl-swarm
+```
+
+2. **Download the auto-restart script:**
+```bash
+wget https://raw.githubusercontent.com/divaLinJs/rl-swarm-autorestart/main/restart_rl_swarm.sh
+chmod +x restart_rl_swarm.sh
+```
+
+Or manually:
+```bash
+curl -O https://raw.githubusercontent.com/divaLinJs/rl-swarm-autorestart/main/restart_rl_swarm.sh
+chmod +x restart_rl_swarm.sh
+```
+
+3. **(Optional) Place your backup authentication files:**
+```bash
 mkdir -p modal-login/temp-data/
 cp /path/to/userData.json modal-login/temp-data/
 cp /path/to/userApiKey.json modal-login/temp-data/
+```
 
-# Make script executable
-chmod +x restart_rl_swarm.sh
-
-# Run the script
+4. **Run the script:**
+```bash
 ./restart_rl_swarm.sh
 ```
 
