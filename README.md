@@ -41,7 +41,7 @@ cp /path/to/userApiKey.json modal-login/temp-data/
 
 4. **Run the script:**
 ```bash
-./restart_rl_swarm.sh
+source venv/bin/activate && ./restart_rl_swarm.sh
 ```
 
 ## First-Time Setup
